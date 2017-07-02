@@ -4,8 +4,8 @@
   "description": "Api backend for the react administration panel",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint src/"
+    "start": "node index.js",
+    "test": "eslint src/"
   },
   "keywords": [
     "control",
@@ -17,14 +17,24 @@
   "author": "Eduardo Obregón",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.25.0",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
-    "babel-preset-es2015-node": "^6.1.1",
-    "babel-preset-stage-0": "^6.24.1",
-     "eslint": "^3.16.1",
+    "babel-preset-es2015-node": "^6.1.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.16.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0"
+  },
+    "babel": {
+    "presets": [
+      "es2015-node",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   }
 }
