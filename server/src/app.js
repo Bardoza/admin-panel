@@ -1,6 +1,5 @@
 import express from 'express';
 
-
 const app = express();
 
 // test express
@@ -14,4 +13,4 @@ app.use((err, req, res, next) => {
   res.status(500).send(err);
 });
 
-export default app
+export default app;
