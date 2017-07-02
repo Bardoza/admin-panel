@@ -1,19 +1,7 @@
-import express from 'express';
+import app from './app';
 
-const app = express();
-const PORT = 3000;
 
-// test express
-
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
-
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
-
-app.use((err, req, res, next) => {
-  console.log('unhandled application error: ', err);
-  res.status(500).send(err);
+app.listen(3000, function() {
+  const { address, port } = this.address()
+  console.log(`Listening on http://${address}:${port}`);
 });
