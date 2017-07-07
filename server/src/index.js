@@ -1,6 +1,7 @@
 import app from './app';
+import {logger} from './util';
 
 app.listen(3000, function() {
   const {address, port} = this.address();
-  console.log(`Listening on http://${address}:${port}`);
+  logger.info(`Listening on http://${address}:${port}`);
 });
